@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+
+  /* Sophisticated Health-Tech Palette: Deep Plum, Soft Lavender, Warm Blush, Warm Off-White, Charcoal */
+  --color-plum-950: #200C26;
+  --color-plum-900: #301339;
+  --color-plum-800: #441B50;
+  --color-plum-700: #5C246C;
+  --color-plum-600: #76308A;
+  --color-plum-500: #9342A9;
+  --color-plum-400: #B268C6;
+  --color-plum-300: #D09DE0;
+  --color-plum-200: #E6C8F0;
+  --color-plum-100: #F3E5F9;
+  --color-plum-50: #FAF4FD;
+
+  --color-lavender-900: #3E3252;
+  --color-lavender-700: #645381;
+  --color-lavender-500: #8E7BB2;
+  --color-lavender-300: #C2B4DA;
+  --color-lavender-200: #DDD4EC;
+  --color-lavender-100: #EDE7F6;
+  --color-lavender-50: #F6F3FB;
+
+  --color-blush-900: #61333D;
+  --color-blush-700: #944D5D;
+  --color-blush-500: #C76F82;
+  --color-blush-300: #E6A2B0;
+  --color-blush-200: #F2C7D1;
+  --color-blush-100: #FAE4E9;
+  --color-blush-50: #FDF4F6;
+
+  --color-charcoal-950: #120F16;
+  --color-charcoal-900: #1C1822;
+  --color-charcoal-800: #2C2635;
+  --color-charcoal-700: #413B4D;
+  --color-charcoal-600: #5A5368;
+  --color-charcoal-500: #756D84;
+  --color-charcoal-400: #948C03;
+  --color-charcoal-300: #B7B0C4;
+  --color-charcoal-200: #D9D4E2;
+  --color-charcoal-100: #ECE9F2;
+  --color-charcoal-50: #F5F4F8;
+
+  --color-canvas-base: #FDFCFB;
+  --color-canvas-subtle: #F8F6F3;
+  --color-canvas-card: #FFFFFF;
+
+  --color-sage-900: #183B2B;
+  --color-sage-700: #265942;
+  --color-sage-500: #397E5E;
+  --color-sage-200: #B7D9C7;
+  --color-sage-100: #DCEEE4;
+  --color-sage-50: #F1F8F4;
+
+  --color-ambermuted-900: #52310C;
+  --color-ambermuted-700: #7D4C16;
+  --color-ambermuted-500: #B26F25;
+  --color-ambermuted-100: #FBEAD7;
+  --color-ambermuted-50: #FDF5ED;
+}
+
+@layer base {
+  body {
+    background-color: #F8F6F3;
+    color: #2C2635;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.011em;
+  }
+}
+
+/* Premium Card & Elevation System */
+.premium-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EBE6DF;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(44, 38, 53, 0.04), 0 2px 6px -1px rgba(44, 38, 53, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  border-color: #DDD5CC;
+  box-shadow: 0 10px 30px -4px rgba(44, 38, 53, 0.07), 0 4px 12px -2px rgba(44, 38, 53, 0.03);
+}
+
+.hero-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FAF7F4 100%);
+  border: 1.5px solid #E2D9CE;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 35px -5px rgba(68, 27, 80, 0.06), 0 4px 14px -2px rgba(44, 38, 53, 0.03);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(235, 230, 223, 0.9);
+}
+
+/* Animated subtle pulse for active phase marker */
+@keyframes subtle-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+.animate-subtle-pulse {
+  animation: subtle-pulse 3s infinite ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D4E2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B7B0C4;
+}
