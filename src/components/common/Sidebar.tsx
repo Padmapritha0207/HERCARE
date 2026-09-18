@@ -50,7 +50,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { id: 'privacy', label: 'Privacy Center', icon: <ShieldCheck className="w-4 h-4 text-[#265942]" /> },
   ];
 
-  const employerNavItems: { id: NavigationTab; label: string; icon: React.ReactNode; badge?: string }[] = [
+  const employerNavItems: { id: NavigationTab; label: string; icon: React.ReactNode; badge?: string; hero?: boolean }[] = [
     { id: 'employer', label: 'Program Overview', icon: <BarChart3 className="w-4 h-4 text-[#441B50]" /> },
     { id: 'privacy', label: 'Privacy Architecture', icon: <ShieldCheck className="w-4 h-4 text-[#265942]" /> },
     { id: 'benefits', label: 'Company Policy Catalog', icon: <Gift className="w-4 h-4" /> },
